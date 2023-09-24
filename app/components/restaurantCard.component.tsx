@@ -17,10 +17,10 @@ export const RestaurantCard: FC<Props> = ({restaurant})=>{
     return (
         <article className="w-full rounded shadow-slate-50 border-t-sky-50">
         <div className="aspect-w-16 aspect-h-9 relative h-60">
-            <Image src={generateUrl(image)} alt={restaurant.name} layout="fill" objectFit="cover" />
+            <Image src={generateUrl(image)} alt={name} layout="fill" objectFit="cover" />
         </div>
         <main>
-            <h3>{restaurant.name.toUpperCase()}</h3>
+            <h3>{name.toUpperCase()}</h3>
         </main>
     </article>
     )
