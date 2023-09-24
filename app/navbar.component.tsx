@@ -4,7 +4,7 @@ const Navbar: FC = () => {
     return (
         <div className="py-5 bg-primaryblue border-b-4 border-slate-500">
             <nav className="container mx-auto flex justify-between">
-                <img alt="logo" src="logo" />
+                <img alt="logo" src="./logo-pink.png"  width={30} height={50}/>
 
                 <ul className="flex list-none gap-3">
                     <li>navlink</li>

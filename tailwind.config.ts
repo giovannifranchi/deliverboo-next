@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         'primaryblue': '#38bdac',
         'primarypink': '#ff8bb0',
+        'primarygreen': '#26443f'
       }
     }
   },
