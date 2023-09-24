@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react";
 import { Typology } from "../page";
 
@@ -10,6 +12,8 @@ const TypologyCard: FC<Props> = ({ typology }) => {
     const { name, image } = typology;
 
     const formatUrl = (image: string | null)=> image ? `${process.env.BASE_URL}/${image}` : '';
+
+    const handleClick = ()=> {}
 
     return (
         <div className="hover:scale-110">
