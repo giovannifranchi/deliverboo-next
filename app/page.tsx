@@ -23,7 +23,7 @@ export type Typology = {
   image:string;
 }
 
-import { RestaurantCard } from './components/restaurantCard.component';
+import Jumbo from "./homeComponents/jumbo.component";
 
 export default async function Home() {
 
@@ -31,12 +31,9 @@ export default async function Home() {
   const restaurants: Restaurant[] = await response.json();
 
   return (
-    <main className='container mx-auto pt-5'>
-      <section className='columns-3'>
-        {
-          restaurants.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)
-        }
-      </section>
+    <main >
+      <Jumbo/>
+
     </main>
   )
 }

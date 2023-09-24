@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Navbar: FC = () => {
     return (
-        <div className="py-5 bg-slate-500 shadow-slate-400">
+        <div className="py-5 bg-primaryblue border-b-4 border-slate-500">
             <nav className="container mx-auto flex justify-between">
                 <img alt="logo" src="logo" />
 
