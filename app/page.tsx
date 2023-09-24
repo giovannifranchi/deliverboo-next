@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 export type Restaurant = {
   id: number;
