@@ -21,7 +21,7 @@ export const FilterProvider: FC<FilterProviderProps> = ({children}) => {
     }
 
     const removeFilter = (id: number): void => {
-        if(!filters.has(id)) return;
+        // if(!filters.has(id)) return;
         setFilters(prevFilters => {
             const newFilters = new Set(prevFilters);
             newFilters.delete(id);

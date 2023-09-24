@@ -1,13 +1,23 @@
 "use client"
 
-import { FC } from "react";
+import { Context, FC } from "react";
 import { Typology } from "../page";
+import { useContext } from "react";
+import { FilterContext } from "../contexts/filter.context";
 
 type Props = {
     typology: Typology
 }
 
+type FilterContextState = {
+    filters: Set<number>;
+    addFilter: (id: number) => void;
+    removeFilter: (id: number) => void;
+};
+
 const TypologyCard: FC<Props> = ({ typology }) => {
+
+    const { addFilter } = useContext(FilterContext)
 
     const { name, image } = typology;
 
