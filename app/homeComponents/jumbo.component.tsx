@@ -6,7 +6,7 @@ const Jumbo: FC = () => {
         <div className="bg-primarypink h-[60vh] flex items-center" style={{ backgroundImage: `url("./jumbotron-background.svg")`, backgroundRepeat: 'no-repeat' }}>
             <div className="flex container mx-auto justify-between items-center px-5">
                 <div className="flex gap-18 self-end">
-                    <img src="./pinkburger.png" alt="pink burger" width={250} height={250} />
+                    <img src="./pinkburger.png" alt="pink burger" width={200} height={230} />
                     <h2 className="text-slate-700 text-3xl font-bold self-center">I tuoi piatti preferiti <br/> direttamente a casa tua.</h2>
                 </div>
                 <div className="flex gap-18">
