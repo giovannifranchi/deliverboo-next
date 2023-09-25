@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import { Typology } from "../page";
 import TypologyCard from "../components/typologyCard.component";

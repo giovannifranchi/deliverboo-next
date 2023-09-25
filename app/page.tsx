@@ -24,7 +24,7 @@ export type Typology = {
 }
 
 import Jumbo from "./homeComponents/jumbo.component";
-import Carousel from "./homeComponents/carousel.component";
+import List from "./list.component";
 
 export default async function Home() {
 
@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <main >
       <Jumbo/>
-      <Carousel/>
+      <List/>
     </main>
   )
 }

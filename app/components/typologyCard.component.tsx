@@ -17,16 +17,18 @@ type FilterContextState = {
 
 const TypologyCard: FC<Props> = ({ typology }) => {
 
-    const { addFilter } = useContext(FilterContext)
+    const {addFilter} = useContext<any>(FilterContext)
 
-    const { name, image } = typology;
+    const { name, image, id } = typology;
 
     const formatUrl = (image: string | null)=> image ? `${process.env.BASE_URL}/${image}` : '';
 
-    const handleClick = ()=> {}
+    const handleClick = (id:number)=> {
+        addFilter(id);
+    }
 
     return (
-        <div className="hover:scale-110">
+        <div className="hover:scale-110" >
             <img src={formatUrl(image)} className="rounded-box object-cover h-[180px] w-[180px]"/>
             <h6 className="text-primarygreen">{name}</h6>
         </div>
