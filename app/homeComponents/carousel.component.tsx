@@ -1,20 +1,32 @@
 
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Typology } from "../page";
 import TypologyCard from "../components/typologyCard.component";
 import axios from "axios";
 import { config } from "process";
 
-const Carousel: FC = async () => {
+const Carousel: FC =  () => {
 
-    const response = await axios.get(`http://localhost:3030/typologies`, {
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+
+    const [typologies, setTypologies] = useState<Typology[]>([])
+
+    useEffect(() => {
+        const fetchData = () => {
+            axios.get(`http://localhost:3030/typologies`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }).then((response)=> {
+                setTypologies(response.data);
+            });
+
+            
         }
-    });
-    const typologies: Typology[] = response.data;
+
+        fetchData();
+    }, [])
 
     
 

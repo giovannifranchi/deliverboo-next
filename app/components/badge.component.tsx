@@ -14,19 +14,19 @@ const Badge: FC<Props> = ({info})=> {
     const classSwitcher = ()=>{
         switch((id % 3) + 1){
             case 1:
-                return 'badge-primarygreen';
+                return 'bg-primarygreen';
             case 2:
-                return 'badge-primaryblue';
+                return 'bg-primaryblue';
             case 3: 
-                return 'badge-primarypink'
+                return 'bg-primarypink'
             default:
-                return 'badge-info';
+                return 'bg-info';
         }
     }
 
     return (
-        <span className={classSwitcher()}>
-            {name.toUpperCase()}
+        <span className={`badge ${classSwitcher()} rounded p-5`}>
+            <h3 className="text-black text-lg font-bold">{name.toUpperCase()}</h3>
         </span>
     );
 }
