@@ -34,7 +34,7 @@ const Restaurants: FC = ()=> {
 
     return (
         <div className="container">
-            { getBadges(filters).map((badge)=> <Badge info={badge} />) }
+            { getBadges(filters).map((badge)=> <Badge key={badge.id} info={badge} />) }
         </div>
     )
 }
