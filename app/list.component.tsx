@@ -9,10 +9,12 @@ import { FilterProvider } from "./contexts/filter.context";
 
 const List:FC = ()=> {
     return (
-        <FilterProvider>
-            <Carousel/>
-            <Restaurants/>
-        </FilterProvider>
+        <>
+            <FilterProvider>
+                <Carousel/>
+                <Restaurants/>
+            </FilterProvider>
+        </>
     );
 }
 

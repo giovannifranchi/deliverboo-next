@@ -1,13 +1,20 @@
-"use client";
+
 
 import { FC } from "react";
 import { Typology } from "../page";
 import TypologyCard from "../components/typologyCard.component";
+import axios from "axios";
+import { config } from "process";
 
 const Carousel: FC = async () => {
 
-    const response = await fetch(`${process.env.BASE_URL}/typologies`);
-    const typologies: Typology[] = await response.json();
+    const response = await axios.get(`http://localhost:3030/typologies`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    });
+    const typologies: Typology[] = response.data;
 
     
 

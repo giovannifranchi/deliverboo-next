@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import { FC } from "react";
 
 const Jumbo: FC = () => {

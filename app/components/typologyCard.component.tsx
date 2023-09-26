@@ -1,6 +1,6 @@
-"use client"
 
-import { Context, FC } from "react";
+
+import { Context, FC, MouseEvent } from "react";
 import { Typology } from "../page";
 import { useContext } from "react";
 import { FilterContext } from "../contexts/filter.context";
@@ -21,14 +21,15 @@ const TypologyCard: FC<Props> = ({ typology }) => {
 
     const { name, image, id } = typology;
 
-    const formatUrl = (image: string | null)=> image ? `${process.env.BASE_URL}/${image}` : '';
+    const formatUrl = (image: string | null)=> image ? `http://localhost:3030/${image}` : '';
 
-    const handleClick = (id:number)=> {
+    const handleClick = (e:MouseEvent)=> {
         addFilter(id);
+        console.log(id);
     }
 
     return (
-        <div className="hover:scale-110" >
+        <div className="hover:scale-110" onClick={handleClick}>
             <img src={formatUrl(image)} className="rounded-box object-cover h-[180px] w-[180px]"/>
             <h6 className="text-primarygreen">{name}</h6>
         </div>
